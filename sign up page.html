@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <style>
+        body{
+            background-color: rgb(222, 219, 219);
+        }
+        .outer {
+            margin: auto;
+            height: 600px;
+            width: 800px;
+            box-shadow: 5px 10px #888888;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            position: relative
+            
+            
+        }
+        .inner{
+            position: absolute;
+            left: 240px;
+            
+            
+        }
+
+        p {
+            margin-left: 80px;
+            text-decoration: underline;
+        }
+
+        .in {
+            margin-left: 80px;
+            padding: 10px
+        }
+
+        #bt {
+            width: fit-content;
+            font-size: 15px;
+            margin-top: 20px;
+            position: absolute;
+            left: 150px;
+        }
+
+        #bt:hover {
+            background: green;
+            font-size: 13px;
+            cursor: pointer;
+            color: white;
+        }
+        
+    </style>
+    <script>
+        function fa() {
+            if (a.value == "" || b.value == "" || c.value == "" || d.value == "" || e.value == "") {
+                f();
+                document.getElementById("a").style.border = "3px solid red";
+                document.getElementById("b").style.border = "3px solid red";
+                document.getElementById("c").style.border = "3px solid red";
+                document.getElementById("d").style.border = "3px solid red";
+                document.getElementById("e").style.border = "3px solid red";
+
+
+                bt.value = "Fill Data First 😏";
+            } else {
+                document.getElementById("a").style.border = "3px solid green";
+                document.getElementById("b").style.border = "3px solid green";
+                document.getElementById("c").style.border = "3px solid green";
+                document.getElementById("d").style.border = "3px solid green";
+                document.getElementById("e").style.border = "3px solid green";
+
+
+
+                bt.value = "Good now 😁";
+                bt.style.left = "120px";
+            }
+        }
+        flag = 1;
+        function f() {
+            if (flag == 1) {
+                bt.style.left = "210px";
+                flag = 2;
+            } else if (flag == 2) {
+                bt.style.left = "80px";
+                flag = 1;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="outer">
+        
+        <div class="inner"> 
+        
+        <h1 style="text-align: center;">SignUp</h1>
+        <p>Name</p>
+        <input class="in" type="text" placeholder="Enter Your Name" id="d"/>
+        <p>Enter Id</p>
+        <input class="in" type="text" placeholder="Enter id" id="a" />
+        <p>Enter Confirm Pass</p>
+        <input class="in" type="password" placeholder="Enter password" id="b" />
+        <p>Phone No.</p>
+        <input class="in" type="number" placeholder="Enter Phone No." id="c"/>
+        <p>Address</p>
+        <input class="in" type="text" placeholder="Enter Your Address" id="e"/>
+        <br />
+        
+        <input type="submit" onmouseenter="fa()" onclick="alert('Well done👍')" id="bt" />
+    </div>
+    </div>
+</body>
+
+</html>
